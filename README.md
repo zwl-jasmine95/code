@@ -52,3 +52,4 @@ _html += `
 ```
 将html用``包裹，并将其中的数据替换成${变量}的形式。
 
+[模板字符串demo](https://zwl-jasmine95.github.io/codes/dist/1-1.html)
