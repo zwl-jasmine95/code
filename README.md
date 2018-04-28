@@ -214,6 +214,7 @@ function round($obj,speed,wait){
 ```
 </details>
 
+<br>
 
 使用时直接调用：
 ```js
