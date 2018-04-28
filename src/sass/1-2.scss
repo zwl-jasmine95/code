@@ -1,0 +1,71 @@
+// 公共样式
+.round-box{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    >ul{
+        list-style: none;
+        padding: 0;
+        width: max-content;
+        position: absolute;
+        clear: both;
+        overflow: auto;
+
+        >li{
+            float: left;
+            height: 100%;
+        }
+    }
+
+    .circle{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        >div{
+            width: 12px;
+            height: 6px;
+            display: inline-block;
+            border: 1px solid #EDEDED;
+            border-radius: 100px;
+            margin: 0 2px;
+            &.circle-active{
+                background-image: linear-gradient(-137deg, #F78D0A 0%, #EB5404 100%);
+                border: 1px solid #F78D0A;
+            }
+        }
+    }
+}
+
+// end 公共样式
+
+
+// 自定义样式
+$width:300px;
+// 必须样式
+.content{
+    width: $width;
+    .round-box{
+        height: 60px;
+        ul{
+            li{
+                width: $width;
+            }
+        }
+    }
+}
+
+// 自由样式
+.content{
+    margin: 30px auto;
+    .round-box{
+        ul li{
+            background: #EDEDED;
+            text-align: center;
+        }
+    }
+}
+
