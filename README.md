@@ -3,16 +3,29 @@
 (主要是记录平时开发中遇到的比较通用的代码，包括js、css、html。说明中的demo代码都是经过压缩打包过的，具体源码请参考src文件夹中对应的文件)
 
 ## 目录
-### js
+<details>
+<summary>### 一、js</summary>
+
 1. [字符串模板](https://github.com/zwl-jasmine95/codes#1%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A8%A1%E6%9D%BF) <br>
 <small>解决获取数据渲染页面时拼接很长字符串的问题</small>
+[模板字符串demo](https://zwl-jasmine95.github.io/codes/dist/1-1.html)
 
 2. [基于jquery的简单轮播](https://github.com/zwl-jasmine95/codes#2%E5%9F%BA%E4%BA%8Ejquery%E7%9A%84%E7%AE%80%E5%8D%95%E8%BD%AE%E6%92%AD) 
+[轮播图demo](https://zwl-jasmine95.github.io/codes/dist/1-2.html)
 
-### css
+</details>
 
-### html
 
+<details>
+<summary>### 二、css</summary>
+
+</details>
+
+
+<details>
+<summary>### 三、html</summary>
+
+</details>
 ---
 
 > ## 一、js
@@ -66,7 +79,6 @@ _html += `
 ```
 将html用``包裹，并将其中的数据替换成${变量}的形式。
 
-[模板字符串demo](https://zwl-jasmine95.github.io/codes/dist/1-1.html)
 
 ---
 
@@ -149,6 +161,8 @@ $width:300px;
 ```
 </details>
 
+<br>
+
 <details>
 <summary>重点！封装的js</summary>
 
@@ -160,7 +174,7 @@ $width:300px;
  * @param {number} wait 暂停时间（ms）
  */
 function round($obj,speed,wait){
-    var speed = speed || 3000, wait = wait || 2000
+    var speed = speed || 2000, wait = wait || 2000
 
     var $el = $obj.find('.round-box'), $ul = $el.find('ul'), $li = $ul.find('li')
     var len = $li.length, $circle = '', index = 1,width = $li.width()
@@ -184,7 +198,7 @@ function round($obj,speed,wait){
         if(index <= len && !$ul.is(':animated')){
             $circle.eq(index).addClass('circle-active').siblings().removeClass('circle-active')
             $ul.animate({left : '-=' + width},speed,function(){
-                if(Math.round($ul.offset().left) === - len * width){
+                if(Math.round($ul.position().left) === - len * width){
                     $ul.css('left',0)
                     index = 1
                     $circle.eq(0).addClass('circle-active').siblings().removeClass('circle-active')
@@ -203,4 +217,3 @@ function round($obj,speed,wait){
 ```js
 round($('.content'))
 ```
-[轮播图demo](https://zwl-jasmine95.github.io/codes/dist/1-2.html)

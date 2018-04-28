@@ -11,7 +11,7 @@ $(function(){
  * @param {number} wait 暂停时间（ms）
  */
 function round($obj,speed,wait){
-    var speed = speed || 3000, wait = wait || 2000
+    var speed = speed || 2000, wait = wait || 2000
 
     var $el = $obj.find('.round-box'), $ul = $el.find('ul'), $li = $ul.find('li')
     var len = $li.length, $circle = '', index = 1,width = $li.width()
@@ -33,12 +33,18 @@ function round($obj,speed,wait){
 
     function slider(){
         if(index <= len && !$ul.is(':animated')){
-            $circle.eq(index).addClass('circle-active').siblings().removeClass('circle-active')
+            if(index == len){
+
+                $circle.eq(0).addClass('circle-active').siblings().removeClass('circle-active')
+            }else{
+
+                $circle.eq(index).addClass('circle-active').siblings().removeClass('circle-active')
+            }
             $ul.animate({left : '-=' + width},speed,function(){
-                if(Math.round($ul.offset().left) === - len * width){
+                if(Math.round($ul.position().left) === - len * width){
                     $ul.css('left',0)
                     index = 1
-                    $circle.eq(0).addClass('circle-active').siblings().removeClass('circle-active')
+                    // $circle.eq(0).addClass('circle-active').siblings().removeClass('circle-active')
                 }
             })
             index++
