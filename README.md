@@ -7,7 +7,7 @@
 1. [字符串模板](https://github.com/zwl-jasmine95/codes#1%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A8%A1%E6%9D%BF) <br>
 <small>解决获取数据渲染页面时拼接很长字符串的问题</small>
 
-2. [基于jquery的简单轮播](https://github.com/zwl-jasmine95/codes#1%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A8%A1%E6%9D%BF) 
+2. [基于jquery的简单轮播](https://github.com/zwl-jasmine95/codes#2%E5%9F%BA%E4%BA%8Ejquery%E7%9A%84%E7%AE%80%E5%8D%95%E8%BD%AE%E6%92%AD) 
 
 ### css
 
@@ -74,6 +74,7 @@ _html += `
 封装一个方法实现简单轮播，可以是纯图片的轮播，也可以是其他内容的轮播。直接使用ES5开发，可以任意使用。
 
 html：
+
 ```html
 <div class="content">
     <div class="round-box">
@@ -87,7 +88,9 @@ html：
 <!-- 最外层div的class名可以任意定义。 -->
 ```
 
-样式：
+<details>
+<summary>css</summary>
+
 ```css
 /* 公共样式 */
 .round-box{
@@ -144,7 +147,11 @@ $width:300px;
     }
 }
 ```
-重点！封装的js
+</details>
+
+<details>
+<summary>重点！封装的js</summary>
+
 ```js
 /**
  * 基于jquery的轮播
@@ -189,6 +196,9 @@ function round($obj,speed,wait){
     setInterval(slider,wait)
 }
 ```
+</details>
+
+
 使用时直接调用：
 ```js
 round($('.content'))
