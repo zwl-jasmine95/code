@@ -34,17 +34,15 @@ function round($obj,speed,wait){
     function slider(){
         if(index <= len && !$ul.is(':animated')){
             if(index == len){
-
                 $circle.eq(0).addClass('circle-active').siblings().removeClass('circle-active')
             }else{
-
                 $circle.eq(index).addClass('circle-active').siblings().removeClass('circle-active')
             }
+            
             $ul.animate({left : '-=' + width},speed,function(){
                 if(Math.round($ul.position().left) === - len * width){
                     $ul.css('left',0)
                     index = 1
-                    // $circle.eq(0).addClass('circle-active').siblings().removeClass('circle-active')
                 }
             })
             index++

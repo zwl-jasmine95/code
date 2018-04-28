@@ -4,28 +4,30 @@
 
 ## 目录
 <details>
-<summary>### 一、js</summary>
+<summary><b>一、js</b></summary>
 
 1. [字符串模板](https://github.com/zwl-jasmine95/codes#1%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A8%A1%E6%9D%BF) <br>
 <small>解决获取数据渲染页面时拼接很长字符串的问题</small>
 [模板字符串demo](https://zwl-jasmine95.github.io/codes/dist/1-1.html)
 
-2. [基于jquery的简单轮播](https://github.com/zwl-jasmine95/codes#2%E5%9F%BA%E4%BA%8Ejquery%E7%9A%84%E7%AE%80%E5%8D%95%E8%BD%AE%E6%92%AD) 
+2. [基于jquery的简单轮播](https://github.com/zwl-jasmine95/codes#2%E5%9F%BA%E4%BA%8Ejquery%E7%9A%84%E7%AE%80%E5%8D%95%E8%BD%AE%E6%92%AD) <br>
 [轮播图demo](https://zwl-jasmine95.github.io/codes/dist/1-2.html)
 
 </details>
 
 
 <details>
-<summary>### 二、css</summary>
+<summary><b>二、css</b></summary>
 
 </details>
 
 
 <details>
-<summary>### 三、html</summary>
+<summary><b>三、html</b></summary>
 
 </details>
+
+
 ---
 
 > ## 一、js
